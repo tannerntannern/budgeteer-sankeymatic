@@ -1,0 +1,16 @@
+{
+  "name": "budgeteer-sankeymatic",
+  "version": "1.0.0",
+  "description": "A little website that combines the power of budgeteer and sankeymatic",
+  "scripts": {
+    "build": "rimraf dist && parcel build src/index.html --no-source-maps"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "rimraf": "^2.6.3"
+  },
+  "repository": "https://github.com/tannerntannern/budgeteer-sankeymatic",
+  "author": "Tanner Nielsen <tannerntannern@gmail.com>",
+  "license": "MIT"
+}
