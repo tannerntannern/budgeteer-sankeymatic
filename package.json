@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A little website that combines the power of budgeteer and sankeymatic",
   "scripts": {
-    "build": "rimraf dist && parcel build src/index.html --no-source-maps"
+    "build": "rimraf docs && parcel build src/index.html --no-source-maps --out-dir docs"
   },
   "dependencies": {},
   "devDependencies": {
