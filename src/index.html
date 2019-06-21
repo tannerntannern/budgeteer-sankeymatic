@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <header>
+        
+    </header>
     <div class="center_basic">
         <table>
             <tr>
@@ -22,28 +25,11 @@
                                         Inputs<span id="input_options_hint">:</span></h2>
 
                                     <div id="input_options">
-                                        <textarea id="flows_in" rows="22" cols="40" onchange="process_sankey();">' Type a list of Flows, like this:
-'     SOURCE [AMOUNT] TARGET
-' Examples:
+                                        <!-- This is the new, fancy addition -->
+                                        <div id="monaco-editor" style="width:600px;height:500px;border:1px solid #ccc"></div>
 
-Wages [2000] Budget
-Interest [25] Budget
-Budget [500] Taxes
-Budget [450] Housing
-Budget [310] Food
-Budget [205] Transportation
-Budget [400] Health Care
-Budget [160] Other Necessities
-
-' After your Flows are entered, use the
-' controls below to customize your
-' diagram's appearance.
-
-' For even finer control over presentation,
-' see the Manual (linked above).</textarea>
-
-                                        <p class="center_basic"><button id="preview_graph"
-                                                type="submit">Preview</button></p>
+                                        <!-- This is the old editor, which has been hidden to avoid breaking the old sankeymatic code -->
+                                        <textarea id="flows_in" rows="22" cols="40" onchange="process_sankey();" style="display: none;"></textarea>
                                     </div>
 
                                     <!-- SIZE & SPACING -->
@@ -229,7 +215,7 @@ Budget [160] Other Necessities
                                         <p class="form_elements2">
                                             <strong>Units:</strong>
                                             <span class="no_wrap"><label for="unit_prefix">Prefix =</label> <input
-                                                    type="text" id="unit_prefix" size="3" maxlength="10"
+                                                    type="text" id="unit_prefix" size="3" maxlength="10" value="$"
                                                     onchange="process_sankey();"></span>
                                             <span class="no_wrap"><label for="unit_suffix">Suffix =</label> <input
                                                     type="text" id="unit_suffix" size="5" maxlength="10"
@@ -355,25 +341,19 @@ Budget [160] Other Necessities
                                                 </p>
                                             </div>
                                         </div>
-
                                     </div>
-
-
                                 </td>
                             </tr>
                         </table>
-
                     </form>
 
                 </td>
                 <td id="grapharea">
-
                     <table id="messages">
                         <tr>
                             <td id="messages_area"></td>
                         </tr>
                     </table>
-
                     <p id="chart">
                         <svg id="sankey_svg" height="600" width="600" xmlns="http://www.w3.org/2000/svg"
                             version="1.1"></svg>
@@ -385,7 +365,6 @@ Budget [160] Other Necessities
                 </td>
             </tr>
         </table>
-
     </div>
 
     <script src="sankeymatic/js/d3.v2.js"></script>
@@ -393,6 +372,7 @@ Budget [160] Other Necessities
     <script src="sankeymatic/js/canvg.js"></script>
     <script src="sankeymatic/js/rgbcolor.js"></script>
     <script src="sankeymatic/js/sankeymatic.js"></script>
+    <script src="index.js"></script>
     <script>
         process_sankey(); // render on page load
     </script>

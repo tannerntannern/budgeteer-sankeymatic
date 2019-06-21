@@ -154,7 +154,7 @@ th#title {
 }
 
 div#input_options {
-    text-align: center;
+    /* text-align: center; */
 }
 
 td#flows_entry {
