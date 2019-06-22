@@ -10,10 +10,12 @@
     "build": "rimraf docs && yarn build-index && yarn build-ts && yarn build-worker && yarn insert-cname",
     "serve": "http-server -c-1 docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@tannerntannern/budgeteer": "^1.0.1",
+    "monaco-editor": "^0.17.0"
+  },
   "devDependencies": {
     "http-server": "^0.11.1",
-    "monaco-editor": "^0.17.0",
     "parcel-bundler": "^1.12.3",
     "rimraf": "^2.6.3"
   },

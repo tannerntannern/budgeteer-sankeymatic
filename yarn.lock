@@ -755,6 +755,13 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
+"@tannerntannern/budgeteer@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@tannerntannern/budgeteer/-/budgeteer-1.0.1.tgz#4713e1f29a0599cf542a847b06836aa978eb0f9b"
+  integrity sha512-USav16POqARifu1WXpHRO2pHIgL7JrDPoi5qL9tx1T6dBV2rDOSRKWquLD72DCknL58xl8+rFn46QEmd5kYZLw==
+  dependencies:
+    kiwi.js "^1.1.1"
+
 "@types/q@^1.5.1":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
@@ -3025,6 +3032,11 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
+
+kiwi.js@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/kiwi.js/-/kiwi.js-1.1.1.tgz#a5b14626e6d34bea9a8eb45e3a7dd8e096fa3f90"
+  integrity sha512-rH3tMPWuGlhhW4PPmUE/IyHyrZ6VehEtwYM2uj3ZEXrgoQv7/Jyr3PqQORSjrWgc6+wx5sNIKNpXEZnldQkwrg==
 
 left-pad@^1.3.0:
   version "1.3.0"
