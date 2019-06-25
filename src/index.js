@@ -25,9 +25,13 @@ self.MonacoEnvironment = {
 	},
 };
 
-// TODO: this will not work long-term
 monaco.languages.typescript.typescriptDefaults.addExtraLib(
-`declare type Supply = 'supply';
+`
+// <TYPES-START>
+
+
+
+declare type Supply = 'supply';
 declare type Consumer = 'consumer';
 declare type Pipe = 'pipe';
 declare type Supplyable = Consumer | Pipe;
@@ -75,7 +79,11 @@ declare function solve(): {
     allNodes: Node<NodeType>[];
     transfers: TwoKeyMap<Node<NodeType>, number>;
     balances: Map<Node<NodeType>, number>;
-};`, '@tannerntannern/budgeteer/dist/resources.d.ts');
+};
+
+
+// <TYPES-END>
+`, '@tannerntannern/budgeteer/dist/resources.d.ts');
 
 window.monacoEditor = monaco.editor.create(document.getElementById('monaco-editor'), {
 	value:
