@@ -10,7 +10,15 @@
 
 <body>
     <header>
-        <strong>SankeyMATIC + Budgeteer</strong>
+        <table id="nav">
+            <tbody>
+                <tr>
+                    <td>
+                        <strong style="font-size: 1.1em;">SankeyMATIC + Budgeteer</strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </header>
     <div class="center_basic">
         <table>
@@ -302,15 +310,15 @@
                                         Export Diagram<span id="export_options_hint">:</span></h2>
 
                                     <div id="export_options" class="form_chunk">
-                                        <p class="form_elements" style="padding:4px;">Once you are satisfied with your
-                                            diagram, you can<br /> <strong>export it</strong> as an image or as vector
-                                            code (SVG):</p>
+                                        <p class="form_elements" style="padding:4px;">
+                                            Once you are satisfied with your diagram, you can <strong>export it</strong> as an SVG:
+                                        </p>
 
-                                        <h3 class="ui_head" onclick="toggle_panel('png_options');"><span
+                                        <h3 style="display: none;" class="ui_head" onclick="toggle_panel('png_options');"><span
                                                 id="png_options_indicator" class="indicator">&dArr;</span><abbr
                                                 title="Portable Network Graphics">PNG</abbr> Image<span
                                                 id="png_options_hint">...</span></h3>
-                                        <div id="png_options" class="form_chunk" style="display: none;">
+                                        <div style="display: none;" id="png_options" class="form_chunk">
                                             <div class="form_elements1">
                                                 <p class="center_para"><strong>Scale:</strong>
                                                     <span class="no_wrap"><input name="scale_x" type="radio" value="1"

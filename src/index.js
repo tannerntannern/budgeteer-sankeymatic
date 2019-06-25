@@ -25,14 +25,61 @@ self.MonacoEnvironment = {
 	},
 };
 
-// TODO: 
-// monaco.languages.typescript.javascriptDefaults.addExtraLib();
-// window.monaco = monaco;
+// TODO: this will not work long-term
+monaco.languages.typescript.typescriptDefaults.addExtraLib(
+`declare type Supply = 'supply';
+declare type Consumer = 'consumer';
+declare type Pipe = 'pipe';
+declare type Supplyable = Consumer | Pipe;
+declare type Consumable = Supply | Pipe;
+declare type NodeType = Supply | Consumer | Pipe;
+declare type To<T extends NodeType = Consumable> = {
+    to: (node: Node<Supplyable>) => Node<T>;
+};
+declare type From<T extends NodeType = Supplyable> = {
+    from: (node: Node<Consumable>) => Node<T>;
+};
+declare type NodeBase = {
+    name: string;
+    type: NodeType;
+};
+declare type Node<T extends NodeType = NodeType> = NodeBase & (T extends Consumable ? {
+    supplies: (amount: number, multiplier?: number) => To<T>;
+    suppliesAsMuchAsNecessary: () => To<T>;
+    suppliesAsMuchAsPossible: () => To<T>;
+} : {}) & (T extends Supplyable ? {
+    consumes: (amount: number, multiplier?: number) => From<T>;
+    consumesAsMuchAsNecessary: () => From<T>;
+    consumesAsMuchAsPossible: () => From<T>;
+} : {});
+/**
+ * Clears all nodes, relationships, and constraints, and resets the kiwi.js solver.
+ */
+declare const reset: () => void;
+/**
+ * Creates a supply node.
+ */
+declare function supply(name: string, capacity: number, multiplier?: number): Node<Supply>;
+/**
+ * Creates a consumer node.
+ */
+declare function consumer(name: string): Node<Consumer>;
+/**
+ * Creates a pipe node.
+ */
+declare function pipe(name: string): Node<Pipe>;
+/**
+ * Resolves the balances and tranfers of the network.
+ */
+declare function solve(): {
+    allNodes: Node<NodeType>[];
+    transfers: TwoKeyMap<Node<NodeType>, number>;
+    balances: Map<Node<NodeType>, number>;
+};`, '@tannerntannern/budgeteer/dist/resources.d.ts');
 
 window.monacoEditor = monaco.editor.create(document.getElementById('monaco-editor'), {
 	value:
-`// see https://github.com/tannerntannern/budgeteer for help!
-// (the highlighting errors will be fixed soon)
+`// see https://github.com/tannerntannern/budgeteer for help
 
 const wages = supply('Wages', 2500);
 const checking = pipe('Checking');
