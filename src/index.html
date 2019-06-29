@@ -12,9 +12,25 @@
     <header>
         <table id="nav">
             <tbody>
-                <tr>
+                <tr style="font-size: 1.2em;">
                     <td>
-                        <strong style="font-size: 1.1em;">SankeyMATIC + Budgeteer</strong>
+                        <a href="https://github.com/tannerntannern/budgeteer-sankeymatic">
+                            About This Website
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://github.com/tannerntannern/budgeteer">
+                            About Budgeteer
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://blog.tannernielsen.com/2019/06/25/Budgeteer-A-Budget-Balancing-Tool/">
+                            Related Blog Post
+                        </a>
+                    </td>
+                    <td>|</td>
+                    <td>
+                        <a href="http://sankeymatic.com/">Original SankeyMATIC</a>
                     </td>
                 </tr>
             </tbody>
@@ -46,6 +62,12 @@
                                                 onclick="processBudgeteer()">
                                                 Preview
                                             </button>
+                                            <!-- <button
+                                                id="get_sankeymatic_code"
+                                                style="padding: 0.25em 1em; margin: 0.2em; font-size: 1.6em;"
+                                                onclick="processBudgeteer()">
+                                                Get SankeyMATIC Code
+                                            </button> -->
                                         </p>
                                     </div>
 
@@ -382,6 +404,17 @@
                 </td>
             </tr>
         </table>
+    </div>
+    <hr/>
+    <div id="footer">
+        <div id="footer-inner">
+            <div id="footer-content">
+                <p>
+                    Created by <a href="https://tannernielsen.com">Tanner Nielsen</a> (GitHub: <a href="https://github.com/tannerntannern">tannerntannern</a>)
+                    | Based on <a href="http://sankeymatic.com">SankeyMATIC</a>, by <a href="http://nowthis.com/">Steven Bogart</a>.
+                </p>
+            </div>
+        </div>
     </div>
 
     <script src="sankeymatic/js/d3.v2.js"></script>

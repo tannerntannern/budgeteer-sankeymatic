@@ -31,6 +31,12 @@ monaco.languages.typescript.typescriptDefaults.addExtraLib(
 
 
 
+
+
+
+
+
+
 declare type Supply = 'supply';
 declare type Consumer = 'consumer';
 declare type Pipe = 'pipe';
@@ -38,16 +44,16 @@ declare type Supplyable = Consumer | Pipe;
 declare type Consumable = Supply | Pipe;
 declare type NodeType = Supply | Consumer | Pipe;
 declare type To<T extends NodeType = Consumable> = {
-    to: (node: Node<Supplyable>) => Node<T>;
+    to: (node: FlowNode<Supplyable>) => FlowNode<T>;
 };
 declare type From<T extends NodeType = Supplyable> = {
-    from: (node: Node<Consumable>) => Node<T>;
+    from: (node: FlowNode<Consumable>) => FlowNode<T>;
 };
 declare type NodeBase = {
     name: string;
     type: NodeType;
 };
-declare type Node<T extends NodeType = NodeType> = NodeBase & (T extends Consumable ? {
+declare type FlowNode<T extends NodeType = NodeType> = NodeBase & (T extends Consumable ? {
     supplies: (amount: number, multiplier?: number) => To<T>;
     suppliesAsMuchAsNecessary: () => To<T>;
     suppliesAsMuchAsPossible: () => To<T>;
@@ -63,22 +69,22 @@ declare const reset: () => void;
 /**
  * Creates a supply node.
  */
-declare function supply(name: string, capacity: number, multiplier?: number): Node<Supply>;
+declare function supply(name: string, capacity: number, multiplier?: number): FlowNode<Supply>;
 /**
  * Creates a consumer node.
  */
-declare function consumer(name: string): Node<Consumer>;
+declare function consumer(name: string): FlowNode<Consumer>;
 /**
  * Creates a pipe node.
  */
-declare function pipe(name: string): Node<Pipe>;
+declare function pipe(name: string): FlowNode<Pipe>;
 /**
  * Resolves the balances and tranfers of the network.
  */
 declare function solve(): {
-    allNodes: Node<NodeType>[];
-    transfers: TwoKeyMap<Node<NodeType>, number>;
-    balances: Map<Node<NodeType>, number>;
+    allNodes: FlowNode<NodeType>[];
+    transfers: TwoKeyMap<FlowNode<NodeType>, number>;
+    balances: Map<FlowNode<NodeType>, number>;
 };
 
 

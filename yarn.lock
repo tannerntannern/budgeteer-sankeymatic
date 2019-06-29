@@ -755,10 +755,10 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
-"@tannerntannern/budgeteer@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@tannerntannern/budgeteer/-/budgeteer-1.0.1.tgz#4713e1f29a0599cf542a847b06836aa978eb0f9b"
-  integrity sha512-USav16POqARifu1WXpHRO2pHIgL7JrDPoi5qL9tx1T6dBV2rDOSRKWquLD72DCknL58xl8+rFn46QEmd5kYZLw==
+"@tannerntannern/budgeteer@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tannerntannern/budgeteer/-/budgeteer-1.0.2.tgz#20355ef982c93368866c2b21d3de73febd0c96c8"
+  integrity sha512-LmbDIrUfr4pQkJwP4nDuZCAqP2frFwcec0oURoIfvwKmzpSZhwySNMP8d5/WXSjmXXNUp5b4BFrLxZGfjEhI0w==
   dependencies:
     kiwi.js "^1.1.1"
 

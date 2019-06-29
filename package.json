@@ -12,7 +12,7 @@
     "serve": "http-server -c-1 docs"
   },
   "dependencies": {
-    "@tannerntannern/budgeteer": "^1.0.1",
+    "@tannerntannern/budgeteer": "^1.0.2",
     "monaco-editor": "^0.17.0"
   },
   "devDependencies": {
