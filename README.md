@@ -22,4 +22,4 @@ Tanner Nielsen <tannerntannern@gmail.com>
 [4]: https://github.com/tannerntannern/budgeteer
 [5]: http://sankeymatic.com
 [6]: https://microsoft.github.io/monaco-editor/
-[7]: https://blog.tannernielsen.com/2019/06/25/Budgeteer-A-Budget-Balancing-Tool/
+[7]: https://blog.tannernielsen.com/2019/06/25/budgeteer-a-budget-balancing-tool
